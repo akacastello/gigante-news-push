@@ -42,6 +42,7 @@
     OneSignalDeferred.push(async function(OneSignal) {
       await OneSignal.init({
         appId: "15a16701-970c-475c-8ac5-b5e39c432932",
+        serviceWorkerPath: "/gigante-news-push/OneSignalSDKWorker.js",
         notifyButton: { enable: true },
         allowLocalhostAsSecureOrigin: false
       });
