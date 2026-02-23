@@ -29,25 +29,21 @@
       font-size: 0.9rem;
     }
   </style>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "15a16701-970c-475c-8ac5-b5e39c432932",
+    });
+  });
+</script>
 </head>
 <body>
 
   <h1>⚡ Gigante News</h1>
   <p>Ative as notificações para saber quando os rivais tropeçarem!</p>
   <div class="badge">🔔 Rivais no Radar</div>
-
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function(OneSignal) {
-      await OneSignal.init({
-        appId: "15a16701-970c-475c-8ac5-b5e39c432932",
-        serviceWorkerPath: "/gigante-news-push/OneSignalSDKWorker.js",
-        notifyButton: { enable: true },
-        allowLocalhostAsSecureOrigin: false
-      });
-    });
-  </script>
 
 </body>
 </html>
